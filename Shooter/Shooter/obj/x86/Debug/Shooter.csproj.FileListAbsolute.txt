@@ -45,3 +45,5 @@ C:\Users\Młody\Documents\Visual Studio 2013\Projects\Shooter\Shooter\bin\Window
 C:\Users\Młody\Documents\Visual Studio 2013\Projects\Shooter\Shooter\bin\Windows\Debug\Content\Strzelba.png
 C:\Users\Młody\Documents\Visual Studio 2013\Projects\Shooter\Shooter\bin\Windows\Debug\Content\Wyjdz.png
 C:\Users\Młody\Documents\Visual Studio 2013\Projects\Shooter\Shooter\bin\Windows\Debug\Content\Niesmiertelnosc.png
+C:\Users\Młody\Documents\Visual Studio 2013\Projects\algorytmy\Shooter\Shooter\obj\x86\Debug\Shooter.exe
+C:\Users\Młody\Documents\Visual Studio 2013\Projects\algorytmy\Shooter\Shooter\obj\x86\Debug\Shooter.pdb
