@@ -1,131 +1,90 @@
-
+#include "Dijkstra.h"
 #include <iostream>
-#include <vector>
-#include <cmath>
 
-using namespace std;
-
-#define UNDEFINED -1
-#define INFINITY 2000000000
-
-struct Neighbor
+Dijkstra::Dijkstra(Vertice* vertices, int verticesNumber, int start)
 {
-    int ordinal;
-    int travelCost;
-};
+    this->uncheckedVertices = vertices;
+    this->checkedVertices = new Vertice[verticesNumber];
+    this->verticesNumber = verticesNumber;
+    this->start = start;
+    this->numberOfCheckedVertices = 0;
+    countTravelCosts();
+}
 
-struct Vertice
+void Dijkstra::writeTravelCost(int finish)
 {
-    vector<Neighbor> neighbors;
-    int travelCost;//=INFINITY
-    int pathToStart;//=UNDEFINED
+    if(uncheckedVertices[finish].isReseted())
+        std::cout << checkedVertices[finish].travelCost << std::endl;
+    else
+        std::cout << "NO" << std::endl;
 
-    void reset()
+    return;
+}
+
+void Dijkstra::countTravelCosts()
+{
+    while(!isEnd())
+        checkClosestVertice();
+
+    return;
+}
+
+void Dijkstra::checkClosestVertice()
+{
+    int ordinalOfClosestVertice = getOrdinalOfClosestVertice();
+    Vertice closestVertice = uncheckedVertices[ordinalOfClosestVertice];
+
+    for(int i=0; i<closestVertice.neighbors.size(); i++)
     {
-        this->pathToStart = UNDEFINED;
-        this->travelCost = INFINITY;
-        this->neighbors.clear();
+        Vertice tempVertice = uncheckedVertices[closestVertice.neighbors[i].ordinal];
+        if(!tempVertice.isReseted() && tempVertice.travelCost > closestVertice.travelCost + closestVertice.neighbors[i].travelCost)
+        {
+            tempVertice.pathToStart = ordinalOfClosestVertice;
+            tempVertice.travelCost = closestVertice.travelCost + closestVertice.neighbors[i].travelCost;
+        }
+
+        uncheckedVertices[closestVertice.neighbors[i].ordinal] = tempVertice;
     }
 
-    bool isReseted()
-    {
-        if(this->pathToStart == UNDEFINED &&
-        this->travelCost == INFINITY &&
-        this->neighbors.empty())
-            return true;
-    }
-};
+    checkedVertices[ordinalOfClosestVertice] = closestVertice;
+    uncheckedVertices[ordinalOfClosestVertice].reset();
+    numberOfCheckedVertices++;
 
-class Djikstra
+    return;
+}
+
+bool Dijkstra::isEnd()
 {
-    public:
+    if(numberOfCheckedVertices<verticesNumber)
+        return false;
 
-        Djikstra(Vertice* vertices, int verticesNumber, int start)
+    return true;
+}
+
+int Dijkstra::getOrdinalOfClosestVertice()
+{
+    int minTravelCost = INFINITY;
+    int closestVertice = UNDEFINED;
+    for(int i=0; i<verticesNumber; i++)
+    {
+        if(uncheckedVertices[i].travelCost<minTravelCost)
         {
-            this->uncheckedVertices = vertices;
-            this->checkedVertices = new Vertice[verticesNumber];
-            this->verticesNumber = verticesNumber;
-            this->start = start;
-            this->numberOfCheckedVertices = 0;
-            countTravelCosts();
+            minTravelCost = uncheckedVertices[i].travelCost;
+            closestVertice = i;
         }
+    }
+    return closestVertice;
+}
 
-        int getTravelCost(int finish)
-        {
-            return checkedVertices[finish].travelCost;
-        }
-
-        ~Djikstra()
-        {
-            delete checkedVertices;
-        }
-
-    private:
-        int verticesNumber;
-        Vertice* checkedVertices;
-        Vertice* uncheckedVertices;
-        int start;
-        int numberOfCheckedVertices;
-
-        void countTravelCosts()
-        {
-            while(!isEnd())
-                checkClosestVertice();
-
-            delete []uncheckedVertices;
-            return;
-        }
-
-        void checkClosestVertice()
-        {
-            int ordinalOfClosestVertice = getOrdinalOfClosestVertice();
-            Vertice closestVertice = uncheckedVertices[ordinalOfClosestVertice];
-
-            for(int i=0; i<closestVertice.neighbors.size(); i++)
-            {
-                Vertice tempVertice = uncheckedVertices[closestVertice.neighbors[i].ordinal];
-                if(!tempVertice.isReseted() && tempVertice.travelCost > closestVertice.travelCost + closestVertice.neighbors[i].travelCost)
-                {
-                    tempVertice.pathToStart = ordinalOfClosestVertice;
-                    tempVertice.travelCost = closestVertice.travelCost + closestVertice.neighbors[i].travelCost;
-                }
-
-                uncheckedVertices[closestVertice.neighbors[i].ordinal] = tempVertice;
-            }
-
-            checkedVertices[ordinalOfClosestVertice] = closestVertice;
-            uncheckedVertices[ordinalOfClosestVertice].reset();
-            numberOfCheckedVertices++;
-
-            return;
-        }
-
-        bool isEnd()
-        {
-            if(numberOfCheckedVertices<verticesNumber)
-                return false;
-
-            return true;
-        }
-
-        int getOrdinalOfClosestVertice()
-        {
-            int minTravelCost = INFINITY;
-            int closestVertice = UNDEFINED;
-            for(int i=0; i<verticesNumber; i++)
-            {
-                if(uncheckedVertices[i].travelCost<minTravelCost)
-                {
-                    minTravelCost = uncheckedVertices[i].travelCost;
-                    closestVertice = i;
-                }
-            }
-            return closestVertice;
-        }
+Dijkstra::~Dijkstra()
+{
+    delete checkedVertices;
+    delete uncheckedVertices;
+}
 
 
-};
 
+/*
 Vertice* initializeVertices(int verticesNumber, int edgesNumber)
 {
     Vertice *vertices = new Vertice[verticesNumber];
@@ -169,3 +128,4 @@ int main()
     delete []vertices;
     return 0;
 }
+*/
