@@ -16,7 +16,6 @@ class BreadthFirstSearch
 
     public:
         BreadthFirstSearch(vector<node*> nodes, int numberOfNodes);
-        virtual ~BreadthFirstSearch();
         vector<int> SearchGraph();
         bool Bipartite();
 
