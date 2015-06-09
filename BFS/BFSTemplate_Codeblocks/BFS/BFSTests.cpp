@@ -2,7 +2,6 @@
 
 #include "catch.hpp"
 #include <vector>
-#include <queue>
 #include "BFS.h"
 
 using namespace std;
@@ -55,6 +54,7 @@ vector<node*> GenerateGraph(std::string input, int numberOfNodes)
 	return result;
 }
 
+
 TEST_CASE("Test bfs for simple graph") {
 	string input = "0 1\n\
 0 2\n\
@@ -81,7 +81,7 @@ TEST_CASE("Test bfs for simple graph") {
 	vector<node*> graph = GenerateGraph(input, 14);
     BreadthFirstSearch* testee = new BreadthFirstSearch(graph, 14);
 
-	auto visitedNodes = testee->SearchGraph();
+	vector<int> visitedNodes = testee->SearchGraph();
 
 	REQUIRE(visitedNodes.size() == 15);
 
