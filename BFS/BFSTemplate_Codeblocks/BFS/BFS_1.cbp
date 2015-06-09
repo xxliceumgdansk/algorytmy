@@ -32,7 +32,10 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
-		<Unit filename="main.cpp" />
+		<Unit filename="BFS.cpp" />
+		<Unit filename="BFS.h" />
+		<Unit filename="BFSTests.cpp" />
+		<Unit filename="catch.hpp" />
 		<Extensions>
 			<code_completion />
 			<debugger />
