@@ -7,7 +7,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Młody\Documents\Visual Studio 2013\Projects\Shooter\WindowsGame2\WindowsGame2\bin\x86\Release\Content\Box.xnb</Output>
+      <Output>C:\Users\Młody\Desktop\Inne\Informatyka\algorytmy\Shooter\WindowsGame2\WindowsGame2\bin\x86\Release\Content\Box.xnb</Output>
       <Time>2015-01-06T00:21:33.1294407+01:00</Time>
     </Item>
     <Item>
@@ -16,7 +16,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Młody\Documents\Visual Studio 2013\Projects\Shooter\WindowsGame2\WindowsGame2\bin\x86\Release\Content\Chodzacy.xnb</Output>
+      <Output>C:\Users\Młody\Desktop\Inne\Informatyka\algorytmy\Shooter\WindowsGame2\WindowsGame2\bin\x86\Release\Content\Chodzacy.xnb</Output>
       <Time>2015-01-06T00:21:33.1474417+01:00</Time>
     </Item>
     <Item>
@@ -25,7 +25,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Młody\Documents\Visual Studio 2013\Projects\Shooter\WindowsGame2\WindowsGame2\bin\x86\Release\Content\GraczLewo.xnb</Output>
+      <Output>C:\Users\Młody\Desktop\Inne\Informatyka\algorytmy\Shooter\WindowsGame2\WindowsGame2\bin\x86\Release\Content\GraczLewo.xnb</Output>
       <Time>2015-01-06T00:21:33.1494418+01:00</Time>
     </Item>
     <Item>
@@ -34,7 +34,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Młody\Documents\Visual Studio 2013\Projects\Shooter\WindowsGame2\WindowsGame2\bin\x86\Release\Content\GraczPrawo.xnb</Output>
+      <Output>C:\Users\Młody\Desktop\Inne\Informatyka\algorytmy\Shooter\WindowsGame2\WindowsGame2\bin\x86\Release\Content\GraczPrawo.xnb</Output>
       <Time>2015-01-06T00:21:33.1504419+01:00</Time>
     </Item>
     <Item>
@@ -43,7 +43,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Młody\Documents\Visual Studio 2013\Projects\Shooter\WindowsGame2\WindowsGame2\bin\x86\Release\Content\Graj.xnb</Output>
+      <Output>C:\Users\Młody\Desktop\Inne\Informatyka\algorytmy\Shooter\WindowsGame2\WindowsGame2\bin\x86\Release\Content\Graj.xnb</Output>
       <Time>2015-01-06T00:21:33.151442+01:00</Time>
     </Item>
     <Item>
@@ -52,7 +52,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Młody\Documents\Visual Studio 2013\Projects\Shooter\WindowsGame2\WindowsGame2\bin\x86\Release\Content\HP1.xnb</Output>
+      <Output>C:\Users\Młody\Desktop\Inne\Informatyka\algorytmy\Shooter\WindowsGame2\WindowsGame2\bin\x86\Release\Content\HP1.xnb</Output>
       <Time>2015-01-06T00:21:33.1584424+01:00</Time>
     </Item>
     <Item>
@@ -61,7 +61,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Młody\Documents\Visual Studio 2013\Projects\Shooter\WindowsGame2\WindowsGame2\bin\x86\Release\Content\HP2.xnb</Output>
+      <Output>C:\Users\Młody\Desktop\Inne\Informatyka\algorytmy\Shooter\WindowsGame2\WindowsGame2\bin\x86\Release\Content\HP2.xnb</Output>
       <Time>2015-01-06T00:21:33.1684429+01:00</Time>
     </Item>
     <Item>
@@ -70,7 +70,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Młody\Documents\Visual Studio 2013\Projects\Shooter\WindowsGame2\WindowsGame2\bin\x86\Release\Content\HP3.xnb</Output>
+      <Output>C:\Users\Młody\Desktop\Inne\Informatyka\algorytmy\Shooter\WindowsGame2\WindowsGame2\bin\x86\Release\Content\HP3.xnb</Output>
       <Time>2015-01-06T00:21:33.169443+01:00</Time>
     </Item>
     <Item>
@@ -79,7 +79,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Młody\Documents\Visual Studio 2013\Projects\Shooter\WindowsGame2\WindowsGame2\bin\x86\Release\Content\Karabin.xnb</Output>
+      <Output>C:\Users\Młody\Desktop\Inne\Informatyka\algorytmy\Shooter\WindowsGame2\WindowsGame2\bin\x86\Release\Content\Karabin.xnb</Output>
       <Time>2015-01-06T00:21:33.186444+01:00</Time>
     </Item>
     <Item>
@@ -88,7 +88,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Młody\Documents\Visual Studio 2013\Projects\Shooter\WindowsGame2\WindowsGame2\bin\x86\Release\Content\Laser.xnb</Output>
+      <Output>C:\Users\Młody\Desktop\Inne\Informatyka\algorytmy\Shooter\WindowsGame2\WindowsGame2\bin\x86\Release\Content\Laser.xnb</Output>
       <Time>2015-01-06T00:21:33.1974446+01:00</Time>
     </Item>
     <Item>
@@ -97,7 +97,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Młody\Documents\Visual Studio 2013\Projects\Shooter\WindowsGame2\WindowsGame2\bin\x86\Release\Content\Minigun.xnb</Output>
+      <Output>C:\Users\Młody\Desktop\Inne\Informatyka\algorytmy\Shooter\WindowsGame2\WindowsGame2\bin\x86\Release\Content\Minigun.xnb</Output>
       <Time>2015-01-06T00:21:33.2344467+01:00</Time>
     </Item>
     <Item>
@@ -106,7 +106,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Młody\Documents\Visual Studio 2013\Projects\Shooter\WindowsGame2\WindowsGame2\bin\x86\Release\Content\Niesmiertelnosc.xnb</Output>
+      <Output>C:\Users\Młody\Desktop\Inne\Informatyka\algorytmy\Shooter\WindowsGame2\WindowsGame2\bin\x86\Release\Content\Niesmiertelnosc.xnb</Output>
       <Time>2015-01-06T00:21:33.2364468+01:00</Time>
     </Item>
     <Item>
@@ -115,7 +115,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Młody\Documents\Visual Studio 2013\Projects\Shooter\WindowsGame2\WindowsGame2\bin\x86\Release\Content\Pistolet.xnb</Output>
+      <Output>C:\Users\Młody\Desktop\Inne\Informatyka\algorytmy\Shooter\WindowsGame2\WindowsGame2\bin\x86\Release\Content\Pistolet.xnb</Output>
       <Time>2015-01-06T00:21:33.2644484+01:00</Time>
     </Item>
     <Item>
@@ -124,7 +124,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Młody\Documents\Visual Studio 2013\Projects\Shooter\WindowsGame2\WindowsGame2\bin\x86\Release\Content\Platforma.xnb</Output>
+      <Output>C:\Users\Młody\Desktop\Inne\Informatyka\algorytmy\Shooter\WindowsGame2\WindowsGame2\bin\x86\Release\Content\Platforma.xnb</Output>
       <Time>2015-01-06T00:21:33.3684544+01:00</Time>
     </Item>
     <Item>
@@ -133,7 +133,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Młody\Documents\Visual Studio 2013\Projects\Shooter\WindowsGame2\WindowsGame2\bin\x86\Release\Content\PociskLaser.xnb</Output>
+      <Output>C:\Users\Młody\Desktop\Inne\Informatyka\algorytmy\Shooter\WindowsGame2\WindowsGame2\bin\x86\Release\Content\PociskLaser.xnb</Output>
       <Time>2015-01-06T00:21:33.3704545+01:00</Time>
     </Item>
     <Item>
@@ -142,7 +142,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Młody\Documents\Visual Studio 2013\Projects\Shooter\WindowsGame2\WindowsGame2\bin\x86\Release\Content\PociskZwykly.xnb</Output>
+      <Output>C:\Users\Młody\Desktop\Inne\Informatyka\algorytmy\Shooter\WindowsGame2\WindowsGame2\bin\x86\Release\Content\PociskZwykly.xnb</Output>
       <Time>2015-01-06T00:21:33.3724546+01:00</Time>
     </Item>
     <Item>
@@ -151,7 +151,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Młody\Documents\Visual Studio 2013\Projects\Shooter\WindowsGame2\WindowsGame2\bin\x86\Release\Content\Rage.xnb</Output>
+      <Output>C:\Users\Młody\Desktop\Inne\Informatyka\algorytmy\Shooter\WindowsGame2\WindowsGame2\bin\x86\Release\Content\Rage.xnb</Output>
       <Time>2015-01-06T00:21:33.3784549+01:00</Time>
     </Item>
     <Item>
@@ -160,7 +160,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Młody\Documents\Visual Studio 2013\Projects\Shooter\WindowsGame2\WindowsGame2\bin\x86\Release\Content\Serce.xnb</Output>
+      <Output>C:\Users\Młody\Desktop\Inne\Informatyka\algorytmy\Shooter\WindowsGame2\WindowsGame2\bin\x86\Release\Content\Serce.xnb</Output>
       <Time>2015-01-06T00:21:33.4044564+01:00</Time>
     </Item>
     <Item>
@@ -169,7 +169,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Młody\Documents\Visual Studio 2013\Projects\Shooter\WindowsGame2\WindowsGame2\bin\x86\Release\Content\Snajpa.xnb</Output>
+      <Output>C:\Users\Młody\Desktop\Inne\Informatyka\algorytmy\Shooter\WindowsGame2\WindowsGame2\bin\x86\Release\Content\Snajpa.xnb</Output>
       <Time>2015-01-06T00:21:33.4274578+01:00</Time>
     </Item>
     <Item>
@@ -178,7 +178,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Młody\Documents\Visual Studio 2013\Projects\Shooter\WindowsGame2\WindowsGame2\bin\x86\Release\Content\Strzelba.xnb</Output>
+      <Output>C:\Users\Młody\Desktop\Inne\Informatyka\algorytmy\Shooter\WindowsGame2\WindowsGame2\bin\x86\Release\Content\Strzelba.xnb</Output>
       <Time>2015-01-06T00:21:33.4474589+01:00</Time>
     </Item>
     <Item>
@@ -187,7 +187,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Młody\Documents\Visual Studio 2013\Projects\Shooter\WindowsGame2\WindowsGame2\bin\x86\Release\Content\Tlo.xnb</Output>
+      <Output>C:\Users\Młody\Desktop\Inne\Informatyka\algorytmy\Shooter\WindowsGame2\WindowsGame2\bin\x86\Release\Content\Tlo.xnb</Output>
       <Time>2015-01-06T00:21:33.4504591+01:00</Time>
     </Item>
     <Item>
@@ -196,7 +196,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Młody\Documents\Visual Studio 2013\Projects\Shooter\WindowsGame2\WindowsGame2\bin\x86\Release\Content\Wyjdz.xnb</Output>
+      <Output>C:\Users\Młody\Desktop\Inne\Informatyka\algorytmy\Shooter\WindowsGame2\WindowsGame2\bin\x86\Release\Content\Wyjdz.xnb</Output>
       <Time>2015-01-06T00:21:33.1154399+01:00</Time>
     </Item>
     <Item>
@@ -205,7 +205,7 @@
       <Importer>FontDescriptionImporter</Importer>
       <Processor>FontDescriptionProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Młody\Documents\Visual Studio 2013\Projects\Shooter\WindowsGame2\WindowsGame2\bin\x86\Release\Content\SpriteFont1.xnb</Output>
+      <Output>C:\Users\Młody\Desktop\Inne\Informatyka\algorytmy\Shooter\WindowsGame2\WindowsGame2\bin\x86\Release\Content\SpriteFont1.xnb</Output>
       <Time>2015-01-06T00:30:27.606011+01:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
@@ -215,10 +215,10 @@
       <TargetProfile>Reach</TargetProfile>
       <BuildConfiguration>Release</BuildConfiguration>
       <CompressContent>true</CompressContent>
-      <RootDirectory>C:\Users\Młody\Documents\Visual Studio 2013\Projects\Shooter\WindowsGame2\WindowsGame2Content\</RootDirectory>
-      <LoggerRootDirectory>C:\Users\Młody\Documents\Visual Studio 2013\Projects\Shooter\WindowsGame2\WindowsGame2\</LoggerRootDirectory>
-      <IntermediateDirectory>C:\Users\Młody\Documents\Visual Studio 2013\Projects\Shooter\WindowsGame2\WindowsGame2\obj\x86\Release\</IntermediateDirectory>
-      <OutputDirectory>C:\Users\Młody\Documents\Visual Studio 2013\Projects\Shooter\WindowsGame2\WindowsGame2\bin\x86\Release\Content\</OutputDirectory>
+      <RootDirectory>C:\Users\Młody\Desktop\Inne\Informatyka\algorytmy\Shooter\WindowsGame2\WindowsGame2Content\</RootDirectory>
+      <LoggerRootDirectory>C:\Users\Młody\Desktop\Inne\Informatyka\algorytmy\Shooter\WindowsGame2\WindowsGame2\</LoggerRootDirectory>
+      <IntermediateDirectory>C:\Users\Młody\Desktop\Inne\Informatyka\algorytmy\Shooter\WindowsGame2\WindowsGame2\obj\x86\Release\</IntermediateDirectory>
+      <OutputDirectory>C:\Users\Młody\Desktop\Inne\Informatyka\algorytmy\Shooter\WindowsGame2\WindowsGame2\bin\x86\Release\Content\</OutputDirectory>
     </Settings>
     <Assemblies>
       <Assembly>
