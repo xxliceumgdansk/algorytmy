@@ -9,22 +9,11 @@ BreadthFirstSearch::BreadthFirstSearch(vector<node*> _graph, int _numberOfNodes)
 vector<int> BreadthFirstSearch::SearchGraph() {
     vector<int> resultList;
 
-    int checkedNodes = 0;
     vector<int> checkingNodes(1, 0);
-    vector<int> toCheckNodes;
-    while(checkedNodes < numberOfNodes)
+    while(checkingNodes.size()!=0)
     {
-        for(int i=0; i<checkingNodes.size(); i++)
-        {
-            node currentNode = *graph[checkingNodes[i]];
-            for(int j=0; currentNode.next[j]!=nullptr; j++)
-                toCheckNodes.push_back(currentNode.next[j].number);
-        }
-
         addVectors<int>(resultList, checkingNodes);
-        checkedNodes += checkingNodes.size();
-        checkingNodes = toCheckNodes;
-        toCheckNodes.clear();
+        checkingNodes = getNeighboursAndCheck(checkingNodes);
     }
 
     return resultList;
@@ -33,6 +22,26 @@ vector<int> BreadthFirstSearch::SearchGraph() {
 bool BreadthFirstSearch::Bipartite() {
     return false;
 }
+
+vector<int> BreadthFirstSearch::getNeighboursAndCheck(vector<int> checkingNodes)
+{
+    vector<int> neighbours;
+    for(int i=0; i<checkingNodes.size(); i++)
+    {
+        node *currentNode = graph[checkingNodes[i]];
+        for(int j=0; (*currentNode).next[j]!=nullptr; j++)
+        {
+            if(!(*currentNode).isChecked)
+            {
+                (*currentNode).isChecked = true;
+                neighbours.push_back((*currentNode).next[j].number);
+            }
+        }
+    }
+    return neighbours;
+}
+
+
 
 
 template<class T>

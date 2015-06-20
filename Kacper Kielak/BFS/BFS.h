@@ -7,6 +7,7 @@ struct node {
 	public:
 		int number;
 		struct node *next;
+		bool isChecked;
 };
 
 class BreadthFirstSearch
@@ -17,8 +18,9 @@ class BreadthFirstSearch
     public:
         BreadthFirstSearch(vector<node*> nodes, int numberOfNodes);
         vector<int> SearchGraph();
-        template<class T> void addVectors(vector<T> &base, vector<T> adder);
         bool Bipartite();
+        vector<int> getNeighboursAndCheck(vector<int> checkingNodes);
+        template<class T> void addVectors(vector<T> &base, vector<T> adder);
 
     protected:
     private:
