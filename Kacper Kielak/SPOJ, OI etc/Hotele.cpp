@@ -5,7 +5,6 @@ struct City
 {
     int number;
     std::vector<int> neighbours;
-    bool wasChecked;
 };
 
 class possibilitiesCalculator
@@ -16,7 +15,8 @@ class possibilitiesCalculator
             citiesNumber(_citiesNumber),
             possibilities(0)
         {
-            count();
+            std::cout << "pc created!\n";
+            countAllPossib();
         }
 
         int getPossibilities()
@@ -29,38 +29,85 @@ class possibilitiesCalculator
         int citiesNumber;
         int possibilities;
 
-        void count()
+        void countAllPossib()
         {
             for(int i=0; i<citiesNumber; i++)
-                getPossibilitiesWith(cities[i]);
+                countFrom(i);
         }
 
-        void getPossibilitiesWith(City city)
+        void countFrom(int city)
         {
-            city.wasChecked=true;
-            std::vector<int> row1; //row = cities in same distance from city(arg)
-            std::vector<int> row2;
-            row1.push_back(city.number);
-            int citiesInRow = 0;
-            while(!row1.empty())
+            std::cout << "count from " << city+1 << " started!; ";
+
+            bool checkedCities[citiesNumber];
+            checkedCities[city]=true;
+
+            int subtreesNumber = cities[city].neighbours.size();
+            if(subtreesNumber<3)
             {
-                for(int i=0; i<row1.size(); i++)
-                    if(!cities[row1[i]].wasChecked)
-                    {
-                        citiesInRow++;
-                        addVectors(row2, cities[row1[i]].neighbours);
-                    }
-
-                row1=row2;
-                row2.clear();
-                possibilities+=(citiesInRow)*(citiesInRow-1)/2; //combination
+                std::cout << std::endl;
+                return;
             }
+            std::cout << "subtreesNumber: " << subtreesNumber;
+
+            std::vector<int> row1[subtreesNumber];
+            std::vector<int> row2[subtreesNumber];
+
+            //
+            for(int i=0; i<subtreesNumber; i++)
+                row1[i].push_back(cities[city].neighbours[i]);
+            //
+            while(atLeast3FullSubtrees(row1, subtreesNumber))
+            {
+                for(int i=0; i<subtreesNumber; i++)
+                {
+                    for(int j=0; j<row1[i].size(); j++)
+                        if(!checkedCities[row1[i][j]])
+                        {
+                            addUncheckedNeighbours(row2[i], cities[row1[i][j]].neighbours, checkedCities);
+                            checkedCities[row1[i][j]]=true;
+                        }
+                }
+
+                countCombinations(row1, subtreesNumber);
+                std::cout << "; in each subtree: ";
+                for(int i=0; i<subtreesNumber; i++)
+                {
+                    std::cout << row1[i].size() << " ";
+                    row1[i]=row2[i];
+                    row2[i].clear();
+                }
+            }
+            std::cout << std::endl;
         }
 
-        void addVectors(std::vector<int> &base, std::vector<int> adder)
+        void countCombinations(std::vector<int> *subtreesRows, int subtreesNumber)
         {
-            for(int i=0; i<adder.size(); i++)
-                base.push_back(adder[i]);
+            for(int i=0; i<subtreesNumber-2; i++)
+                for(int j=i+1; j<subtreesNumber-1; j++)
+                    for(int k=j+1; k<subtreesNumber; k++)
+                        possibilities+=(subtreesRows[i].size()*subtreesRows[j].size()*subtreesRows[k].size());
+        }
+
+        bool atLeast3FullSubtrees(std::vector<int> *subtrees, int subtreesNumber)
+        {
+            int notEmptySubtrees=0;
+            for(int i=0; i<subtreesNumber; i++)
+                if(!subtrees[i].empty())
+                    notEmptySubtrees++;
+
+            if(notEmptySubtrees>2)
+                return true;
+
+            return false;
+        }
+
+        void addUncheckedNeighbours(std::vector<int> &base, std::vector<int> neighbours, bool *checkedCities)
+        {
+            if(!neighbours.empty())
+                for(int i=0; i<neighbours.size(); i++)
+                    if(!checkedCities[neighbours[i]])
+                        base.push_back(neighbours[i]);
         }
 };
 
@@ -76,6 +123,7 @@ City* parsePaths(int paths[][2], int citiesNumber)
         cities[paths[i][1]].neighbours.push_back(paths[i][0]);
     }
 
+    std::cout << "paths parsed to cities!\n";
     return cities;
 }
 
@@ -86,7 +134,10 @@ int main()
 
     int paths[citiesNumber-1][2];
     for(int i=0; i<citiesNumber-1; i++)
+    {
         std::cin >> paths[i][0] >> paths[i][1];
+        paths[i][0]--; paths[i][1]--; //computer counts from 0, cities are given from 1
+    }
 
     City *cities = parsePaths(paths, citiesNumber);
 
