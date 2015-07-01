@@ -30,7 +30,6 @@ node* generateGraph(int nodesNumber, int edgesNumber)
         nodes[i].parent=UNDEF;
         nodes[i].visited=false;
     }
-    printf("graph generated!\n");
     return nodes;
 }
 
@@ -59,19 +58,16 @@ int main()
 {
     int nodesNumber, edgesNumber;
     scanf("%d", &nodesNumber); scanf("%d", &edgesNumber);
-    printf("Nodes and edges numberes scaned!\n");
     node *nodes = generateGraph(nodesNumber, edgesNumber);
     int currentNodeNumber=0;
 
     while(currentNodeNumber!=UNDEF)
     {
-        printf("Current node number is: %d, ", currentNodeNumber);
         if(nodes[currentNodeNumber].visited)
         {
             printf("NO");
             return 0;
         }
-        printf("and it wasn't visited yet!\n");
         nodes[currentNodeNumber].visited=true;
         currentNodeNumber=getNextNodeNumber(currentNodeNumber, nodes);
     }
