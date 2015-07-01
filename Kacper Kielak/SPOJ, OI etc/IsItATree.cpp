@@ -58,7 +58,14 @@ int main()
 {
     int nodesNumber, edgesNumber;
     scanf("%d", &nodesNumber); scanf("%d", &edgesNumber);
+    if(nodesNumber!=edgesNumber+1)
+    {
+        printf("NO");
+        return 0;
+    }
+
     node *nodes = generateGraph(nodesNumber, edgesNumber);
+
     int currentNodeNumber=0;
 
     while(currentNodeNumber!=UNDEF)
@@ -71,9 +78,8 @@ int main()
         nodes[currentNodeNumber].visited=true;
         currentNodeNumber=getNextNodeNumber(currentNodeNumber, nodes);
     }
-
     for(int i=0; i<nodesNumber; i++)
-        if(nodes[i].neighbours.empty())
+        if(!nodes[i].visited)
         {
             printf("NO");
             return 0;
