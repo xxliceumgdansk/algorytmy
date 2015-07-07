@@ -5,54 +5,115 @@
 
 #define UNDEF -1
 
-struct node
+struct Node
 {
     int parent;
     std::vector<int> neighbours;
     int checkedNeighbours;
     bool visited;
+
 };
 
-node* generateGraph(int nodesNumber, int edgesNumber)
+Node* generateGraph(int nodesNumber, int edgesNumber)
 {
-    node *nodes = new node[nodesNumber];
+    Node *graph = new Node[nodesNumber];
+    for(int i=0; i<nodesNumber; i++)
+    {
+        graph[i].parent=UNDEF,
+        graph[i].checkedNeighbours=0,
+        graph[i].visited=false;
+    }
+
     for(int i=0; i<edgesNumber; i++)
     {
         int start, finish;
         scanf("%d", &start); scanf("%d", &finish);
         start--; finish--;
-        nodes[start].neighbours.push_back(finish);
-        nodes[finish].neighbours.push_back(start);
+        graph[start].neighbours.push_back(finish);
+        graph[finish].neighbours.push_back(start);
     }
-    for(int i=0; i<nodesNumber; i++)
-    {
-        nodes[i].checkedNeighbours=0;
-        nodes[i].parent=UNDEF;
-        nodes[i].visited=false;
-    }
-    return nodes;
+
+    return graph;
 }
 
-int getNextNodeNumber(int currentNodeNumber, node* nodes)
+class TreeChecker
 {
-    while(nodes[currentNodeNumber].checkedNeighbours==nodes[currentNodeNumber].neighbours.size())
-    {
-        if(nodes[currentNodeNumber].parent==UNDEF)
-            return UNDEF;
+    public:
+        TreeChecker(Node* _graph, int _nodesNumber):
+            graph(_graph),
+            nodesNumber(_nodesNumber)
+        {}
 
-        currentNodeNumber=nodes[currentNodeNumber].parent;
-    }
+        bool isATree()
+        {
+            if(!isTreeStructured())
+                return false;
 
-    int nextNodeNumber = nodes[currentNodeNumber].neighbours[nodes[currentNodeNumber].checkedNeighbours];
-    nodes[currentNodeNumber].checkedNeighbours++;
+            if(!wasEveryNodeVisited())
+                return false;
 
-    if(nextNodeNumber==nodes[currentNodeNumber].parent)
-        nextNodeNumber=getNextNodeNumber(currentNodeNumber, nodes);
-    else
-        nodes[nextNodeNumber].parent=currentNodeNumber;
+            return true;
+        }
 
-    return nextNodeNumber;
-}
+    private:
+        Node* graph;
+        int nodesNumber;
+
+        bool isTreeStructured()
+        {
+            int currentNode=0;
+
+            while(currentNode!=UNDEF)
+            {
+                if(graph[currentNode].visited)
+                    return false;
+
+                graph[currentNode].visited=true;
+                currentNode=getNextNode(currentNode);
+            }
+
+            return true;
+        }
+
+        bool wasEveryNodeVisited()
+        {
+            for(int i=0; i<nodesNumber; i++)
+                if(!graph[i].visited)
+                    return false;
+
+            return true;
+        }
+
+        int getNextNode(int currentNode)
+        {
+            while(wasEveryNeighbourChecked(currentNode))
+            {
+                if(graph[currentNode].parent==UNDEF)
+                    return UNDEF;
+
+                currentNode=graph[currentNode].parent;
+            }
+
+            int nextNode = graph[currentNode].neighbours[graph[currentNode].checkedNeighbours];
+            //number of checked neighbours is also an index of next unchecked neighbour ^^
+            graph[currentNode].checkedNeighbours++;
+
+            if(nextNode==graph[currentNode].parent)
+                nextNode=getNextNode(currentNode);
+            else
+                graph[nextNode].parent=currentNode;
+
+            return nextNode;
+        }
+
+        bool wasEveryNeighbourChecked(int currentNode)
+        {
+            if(graph[currentNode].checkedNeighbours!=graph[currentNode].neighbours.size())
+                return false;
+
+            return true;
+        }
+};
 
 int main()
 {
@@ -64,27 +125,13 @@ int main()
         return 0;
     }
 
-    node *nodes = generateGraph(nodesNumber, edgesNumber);
+    Node *graph = generateGraph(nodesNumber, edgesNumber);
 
-    int currentNodeNumber=0;
+    TreeChecker treeChecker(graph, nodesNumber);
+    if(treeChecker.isATree())
+        printf("YES");
+    else
+        printf("NO");
 
-    while(currentNodeNumber!=UNDEF)
-    {
-        if(nodes[currentNodeNumber].visited)
-        {
-            printf("NO");
-            return 0;
-        }
-        nodes[currentNodeNumber].visited=true;
-        currentNodeNumber=getNextNodeNumber(currentNodeNumber, nodes);
-    }
-    for(int i=0; i<nodesNumber; i++)
-        if(!nodes[i].visited)
-        {
-            printf("NO");
-            return 0;
-        }
-
-    printf("YES");
     return 0;
 }
